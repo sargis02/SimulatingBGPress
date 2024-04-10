@@ -3,10 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/User/Documents/NetBeansProjects/Simulating%20BG%20Press/src/mainpkg/DashboardHeadofIT.fxml</file>
-            <file>file:/C:/Users/User/Documents/NetBeansProjects/Simulating%20BG%20Press/src/mainpkg/LoginController.java</file>
-            <file>file:/C:/Users/User/Documents/NetBeansProjects/Simulating%20BG%20Press/src/mainpkg/SimulatingBGPress.java</file>
-            <file>file:/C:/Users/User/Documents/NetBeansProjects/Simulating%20BG%20Press/src/mainpkg/Login.fxml</file>
+            <file>file:/C:/Users/User/Documents/GitHub/SimulatingBGPress/Simulating%20BG%20Press/src/mainpkg/CybersecurityManagerScene.fxml</file>
+            <file>file:/C:/Users/User/Documents/GitHub/SimulatingBGPress/Simulating%20BG%20Press/src/mainpkg/SimulatingBGPress.java</file>
+            <file>file:/C:/Users/User/Documents/GitHub/SimulatingBGPress/Simulating%20BG%20Press/src/mainpkg/DashboardHeadofITController.java</file>
+            <file>file:/C:/Users/User/Documents/GitHub/SimulatingBGPress/Simulating%20BG%20Press/src/mainpkg/CybersecurityManagerSceneController.java</file>
+            <file>file:/C:/Users/User/Documents/GitHub/SimulatingBGPress/Simulating%20BG%20Press/src/mainpkg/CybersecurityManager.java</file>
         </group>
     </open-files>
 </project-private>
