@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXML.java to edit this template
- */
 package mainpkg;
 
 import javafx.application.Application;
@@ -10,29 +6,32 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-/**
- *
- * @author User
- */
 public class SimulatingBGPress extends Application {
-    
+
+    private Stage stage;
+
     @Override
-    public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
-        
-        Scene scene = new Scene(root);
-        
-        stage.setScene(scene);
+    public void start(Stage primaryStage) throws Exception {
+        this.stage = primaryStage;
+        showLoginScene();
+    }
+
+    private void showLoginScene() throws Exception {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("Login.fxml"));
+        Parent root = loader.load();
+        LoginController loginController = loader.getController();
+        loginController.setMainApp(this);
+        stage.setScene(new Scene(root));
         stage.show();
     }
 
-    /**
-     * @param args the command line arguments
-     */
+    public void showDashboardScene(String fxmlFile) throws Exception {
+        Parent root = FXMLLoader.load(getClass().getResource(fxmlFile));
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
+
     public static void main(String[] args) {
         launch(args);
     }
-    
 }
-
-

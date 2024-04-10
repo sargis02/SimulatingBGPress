@@ -1,51 +1,36 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
- */
 package mainpkg;
 
-import java.net.URL;
-import java.util.ResourceBundle;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
-/**
- * FXML Controller class
- *
- * @author User
- */
-public class LoginController implements Initializable {
+public class LoginController {
 
     @FXML
     private TextField usernameTF;
+
     @FXML
     private PasswordField passwordPF;
 
-    /**
-     * Initializes the controller class.
-     * @param url
-     * @param rb
-     */
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        // TODO
-    }    
+    private SimulatingBGPress mainApp;
 
+    public void setMainApp(SimulatingBGPress mainApp) {
+        this.mainApp = mainApp;
+    }
 
     @FXML
-    public void loginButton(ActionEvent event) {
+    public void loginButton() throws Exception {
         String username = usernameTF.getText();
         String password = passwordPF.getText();
 
-        // Perform authentication (e.g., check credentials against stored data)
-        if (username.equals("admin") && password.equals("admin123")) {
-            // Open user management scene
-            // You can load the UserManagement.fxml here
-            System.out.println("Login successful!");
+        // Perform authentication
+        if (username.equals("headofit") && password.equals("headofit12")) {
+            // Open Head of IT dashboard scene
+            mainApp.showDashboardScene("DashboardHeadofIT.fxml");
+        } else if (username.equals("webeditor") && password.equals("webeditor12")) {
+            // Open Web Editor dashboard scene
+            mainApp.showDashboardScene("DashboardWebEditor.fxml");
         } else {
             // Show error message for invalid credentials
             Alert alert = new Alert(Alert.AlertType.ERROR);
@@ -55,7 +40,4 @@ public class LoginController implements Initializable {
             alert.showAndWait();
         }
     }
-
-    
 }
-
