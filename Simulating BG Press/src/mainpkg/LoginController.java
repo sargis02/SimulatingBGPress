@@ -30,7 +30,13 @@ public class LoginController {
             mainApp.showDashboardScene("DashboardHeadofIT.fxml");
         } else if (username.equals("webeditor") && password.equals("webeditor12")) {
             // Open Web Editor dashboard scene
-            mainApp.showDashboardScene("DashboardWebEditor.fxml");
+            mainApp.showDashboardScene("DashboardWebEditor.fxml");      
+        } else if (username.equals("supplier") && password.equals("supplier12")) {
+            // Open Supplier dashboard scene
+            mainApp.showDashboardScene("DashboardSupplier.fxml");
+        } else if (username.equals("archivist") && password.equals("archivist12")) {
+            // Open Archivist dashboard scene
+            mainApp.showDashboardScene("DashboardArchivist.fxml");
         } else {
             // Show error message for invalid credentials
             Alert alert = new Alert(Alert.AlertType.ERROR);
