@@ -1,2 +1,1 @@
-Quotation{quotationNumber='65', description='yjyj', quantity=123, unitPrice=34.0, total=4182.0}
-Quotation{quotationNumber='495', description='kjg', quantity=54, unitPrice=2.0, total=108.0}
+Quotation{quotationNumber='4', description='sdgfd', quantity=3245, unitPrice=48.0, total=155760.0}
