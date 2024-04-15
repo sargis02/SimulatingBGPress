@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.supplierQuotationSceneController">
+   <children>
+      <Label layoutX="226.0" layoutY="14.0" text="Quotations">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="32.0" layoutY="70.0" text="Quantity:" />
+      <Label layoutX="32.0" layoutY="96.0" text="Description:" />
+      <Label layoutX="32.0" layoutY="123.0" text="Unit Price:" />
+      <Label layoutX="32.0" layoutY="149.0" text="Quotation No.:" />
+      <TextField fx:id="quotationQuantityTextField" layoutX="132.0" layoutY="70.0" />
+      <TextField fx:id="quotationDescriptionTextField" layoutX="132.0" layoutY="96.0" />
+      <TextField fx:id="quotationUnitPriceTextField" layoutX="132.0" layoutY="120.0" />
+      <TextField fx:id="quotationNumberTextField" layoutX="132.0" layoutY="146.0" />
+        <TableView fx:id="quotationsTableView" layoutX="32.0" layoutY="186.0" prefHeight="200.0" prefWidth="541.0">
+            <columns>
+                <TableColumn fx:id="quotationNoTableColumn" prefWidth="110.0" text="Quotation No." >
+                    <cellValueFactory>
+                        <PropertyValueFactory property="quotationNumber" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="quotationDescriptionTableColumn" prefWidth="166.0" text="Description" >
+                   <cellValueFactory>
+                       <PropertyValueFactory property="description" />
+                   </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="quotationQuantityTableColumn" minWidth="6.0" prefWidth="77.0" text="Quantity" >
+                    <cellValueFactory>
+                        <PropertyValueFactory property="quantity" />
+                    </cellValueFactory>
+                </TableColumn>
+               <TableColumn fx:id="quotationUnitPriceTableColumn" prefWidth="79.0" text="Unit Price" >
+                   <cellValueFactory>
+                       <PropertyValueFactory property="unitPrice" />
+                   </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="totalTableColumn" prefWidth="108.0" text="Total" >
+                    <cellValueFactory>
+                        <PropertyValueFactory property="total" />
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+      <Button layoutX="349.0" layoutY="86.0" mnemonicParsing="false" onAction="#addQuotationButton" prefHeight="63.0" prefWidth="220.0" text="Add Quotation" />
+      <Button layoutX="233.0" layoutY="399.0" mnemonicParsing="false" onAction="#showQuotationsButton" text="Show Quotations" />
+   </children>
+</AnchorPane>
