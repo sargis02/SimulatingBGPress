@@ -11,9 +11,7 @@
    <children>
       <TableView fx:id="recordsTableView" layoutX="50.0" layoutY="77.0" prefHeight="273.0" prefWidth="500.0">
          <columns>
-            <TableColumn fx:id="recordsTitleTableView" prefWidth="150.0" text="Title" />
-            <TableColumn fx:id="recordsCreatorTableView" prefWidth="182.0" text="Creator" />
-            <TableColumn fx:id="recordsDateTableView" prefWidth="167.0" text="Date" />
+            <TableColumn fx:id="recordsTitleTableView" prefWidth="499.0" text="Record Title" />
          </columns>
       </TableView>
       <Button layoutX="179.0" layoutY="361.0" mnemonicParsing="false" onAction="#recordsUploadFileButton" text="Upload" />
@@ -23,6 +21,5 @@
             <Font name="System Bold" size="24.0" />
          </font>
       </Text>
-      <Button layoutX="266.0" layoutY="361.0" mnemonicParsing="false" onAction="#recordsRetrieveButton" text="Retrieve" />
    </children>
 </AnchorPane>

@@ -32,8 +32,6 @@ public class archivistRecordsSceneController implements Initializable {
 
     @FXML private TableView<String> recordsTableView;
     @FXML private TableColumn<String, String> recordsTitleTableView;
-    @FXML private TableColumn<String, String> recordsCreatorTableView;
-    @FXML private TableColumn<String, String> recordsDateTableView;
     
     private Records archivist;
     
@@ -81,10 +79,6 @@ public class archivistRecordsSceneController implements Initializable {
         } else {
             showAlert(Alert.AlertType.WARNING, "No File Selected", "Please select a file to delete", null);
         }
-    }
-
-    @FXML
-    private void recordsRetrieveButton(ActionEvent event) {
     }
     
     private void updateFileTable() {
